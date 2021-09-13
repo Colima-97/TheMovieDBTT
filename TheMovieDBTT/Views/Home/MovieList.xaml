@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:TheMovieDBTT.Customs.Controls"
+    x:Class="TheMovieDBTT.Views.Home.MovieList"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+       <Grid
+           RowDefinitions="35*, 65*"
+           RowSpacing="{StaticResource NegativeNormalSpacing}">
+           <Frame
+               Grid.Row="0"
+               Style="{StaticResource SecondaryFrame}">
+               <StackLayout>
+                   <Label
+                       Text="Hello, what do you want to watch?"
+                       Style="{StaticResource TitleLabel}"/>
+                   <SearchBar/>
+               </StackLayout>
+           </Frame>
+
+           <Frame
+               Grid.Row="1"
+               Style="{StaticResource PrimaryFrame}">
+               
+               <ScrollView>
+                   <!--Movies section-->
+                   <StackLayout
+                       Spacing="{StaticResource SmallSpacing}">
+                       <!--Top Rate CollectionView-->
+                       <CollectionView
+                           ItemsSource="{Binding TopRateMoviesList}"
+                           ItemsLayout="HorizontalList"
+                           SelectionMode="Single"
+                           SelectedItem="{Binding TopRateMovieSelected}">
+                           <CollectionView.Header>
+                               <Label
+                                   Text="TOP RATED"
+                                   TextColor="White"
+                                   FontSize="Small"
+                                   HorizontalTextAlignment="Start"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Start"/>
+                           </CollectionView.Header>
+
+                           <CollectionView.ItemTemplate>
+                               <DataTemplate>
+                                   <controls:MovieControl/>
+                               </DataTemplate>
+                           </CollectionView.ItemTemplate>
+
+                           <CollectionView.EmptyView>
+                               <ContentView>
+                                   <Label
+                                       Text="No movie was found"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Fill"
+                                       HorizontalTextAlignment="Center"/>
+                               </ContentView>
+                           </CollectionView.EmptyView>
+                       </CollectionView>
+
+                       <!--Upcoming CollectionView-->
+                       <CollectionView
+                           ItemsSource="{Binding UpcomingMoviesList}"
+                           ItemsLayout="HorizontalList"
+                           SelectionMode="Single"
+                           SelectedItem="{Binding UpcomingMovieSelected}">
+                           <CollectionView.Header>
+                               <Label
+                                   Text="UPCOMING"
+                                   TextColor="White"
+                                   FontSize="Small"
+                                   HorizontalTextAlignment="Start"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Start"/>
+                           </CollectionView.Header>
+
+                           <CollectionView.ItemTemplate>
+                               <DataTemplate>
+                                   <controls:MovieControl/>
+                               </DataTemplate>
+                           </CollectionView.ItemTemplate>
+
+                           <CollectionView.EmptyView>
+                               <ContentView>
+                                   <Label
+                                       Text="No movie was found"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Fill"
+                                       HorizontalTextAlignment="Center"/>
+                               </ContentView>
+                           </CollectionView.EmptyView>
+                       </CollectionView>
+
+                       <!--Popular CollectionView-->
+                       <CollectionView
+                           ItemsSource="{Binding PopularMoviesList}"
+                           ItemsLayout="HorizontalList"
+                           SelectionMode="Single"
+                           SelectedItem="{Binding PopularMovieSelected}">
+                           <CollectionView.Header>
+                               <Label
+                                   Text="POPULAR"
+                                   TextColor="White"
+                                   FontSize="Small"
+                                   HorizontalTextAlignment="Start"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Start"/>
+                           </CollectionView.Header>
+
+                           <CollectionView.ItemTemplate>
+                               <DataTemplate>
+                                   <controls:MovieControl/>
+                               </DataTemplate>
+                           </CollectionView.ItemTemplate>
+
+                           <CollectionView.EmptyView>
+                               <ContentView>
+                                   <Label
+                                       Text="No movie was found"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Fill"
+                                       HorizontalTextAlignment="Center"/>
+                               </ContentView>
+                           </CollectionView.EmptyView>
+                       </CollectionView>
+                   </StackLayout>
+               </ScrollView>
+           </Frame>
+
+        </Grid> 
+    </ContentPage.Content>
+</ContentPage>

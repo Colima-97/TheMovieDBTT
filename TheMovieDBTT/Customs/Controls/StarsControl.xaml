@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TheMovieDBTT.Customs.Controls.StarsControl">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal">
+            <Label 
+                x:Name="firstStar"
+                Style="{StaticResource StartStyle}"/>
+
+            <Label 
+                x:Name="secondStar"
+                Style="{StaticResource StartStyle}"/>
+
+            <Label 
+                x:Name="thirdStar"
+                Style="{StaticResource StartStyle}"/>
+
+            <Label 
+                x:Name="fourthStar"
+                Style="{StaticResource StartStyle}"/>
+
+            <Label 
+                x:Name="fifthStar"
+                Style="{StaticResource StartStyle}"/>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

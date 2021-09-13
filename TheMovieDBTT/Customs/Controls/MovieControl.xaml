@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:TheMovieDBTT.Customs.Controls"
+    x:Class="TheMovieDBTT.Customs.Controls.MovieControl">
+    <ContentView.Content>
+        <Grid
+            RowDefinitions="70*, 15*, 15*"
+            RowSpacing="{StaticResource SmallSpacing}">
+            <Frame
+                Grid.Row="0"
+                Padding="{StaticResource NoPadding}"
+                CornerRadius="5"
+                BackgroundColor="Transparent">
+                <Image
+                    Aspect="Fill"
+                    Source="{Binding Image}"/>
+            </Frame>
+
+            <Label
+                Grid.Row="1"
+                Text="{Binding Title}"
+                Style="{StaticResource MovieTitleLabel}"/>
+            
+            <controls:StarsControl
+                Grid.Row="2"
+                StarsVoteValue="{Binding VoteAverage}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
