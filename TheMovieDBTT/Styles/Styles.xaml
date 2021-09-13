@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:TheMovieDBTT.Helpers"
+    x:Class="TheMovieDBTT.Styles.Styles">
+
+    <!--Labels-->
+    <Style
+        TargetType="Label"
+        x:Key="TitleLabel">
+        <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+        <Setter Property="FontSize" Value="Title"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+    </Style>
+
+    <Style
+        TargetType="Label"
+        x:Key="MovieTitleLabel">
+        <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+        <Setter Property="FontSize" Value="Body"/>
+        <Setter Property="VerticalTextAlignment" Value="Start"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+    </Style>
+
+    <!--Frames-->
+    <Style
+        TargetType="Frame"
+        x:Key="PrimaryFrame">
+        <Setter Property="CornerRadius" Value="{StaticResource NormalCornerRadius}"/> 
+        <Setter Property="Padding" Value="{StaticResource NormalPadding}"/> 
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundColor}"/>
+    </Style>
+
+    <Style
+        TargetType="Frame"
+        x:Key="SecondaryFrame">
+        <Setter Property="CornerRadius" Value="{StaticResource NormalCornerRadius}"/> 
+        <Setter Property="Padding" Value="{StaticResource NormalPadding}"/> 
+        <Setter Property="BackgroundColor" Value="{StaticResource SecondaryBackgroundColor}"/>
+    </Style>
+
+    <!--Stars-->
+    <Style
+        TargetType="Label"
+        x:Key="StartStyle">
+        <Setter Property="Text" Value="{Static helpers:Icons.NormalStar}"/>
+        <Setter Property="TextColor" Value="Yellow"/>
+        <Setter Property="FontFamily" Value="{StaticResource FontAwesomeFreeSolid}"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Opacity" Value="1"/>
+    </Style>
+
+</ResourceDictionary>
