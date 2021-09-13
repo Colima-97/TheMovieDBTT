@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\" />
@@ -25,6 +26,11 @@
     <None Remove="ViewModels\Home\" />
     <None Remove="Customs\" />
     <None Remove="Customs\Controls\" />
+    <None Remove="Models\API\" />
+    <None Remove="Models\API\Base\" />
+    <None Remove="Models\API\Request\" />
+    <None Remove="Models\API\Response\" />
+    <None Remove="Newtonsoft.Json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -37,5 +43,9 @@
     <Folder Include="ViewModels\Home\" />
     <Folder Include="Customs\" />
     <Folder Include="Customs\Controls\" />
+    <Folder Include="Models\API\" />
+    <Folder Include="Models\API\Base\" />
+    <Folder Include="Models\API\Request\" />
+    <Folder Include="Models\API\Response\" />
   </ItemGroup>
 </Project>
