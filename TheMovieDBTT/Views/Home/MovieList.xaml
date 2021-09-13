@@ -37,11 +37,7 @@
                            <CollectionView.Header>
                                <Label
                                    Text="TOP RATED"
-                                   TextColor="White"
-                                   FontSize="Small"
-                                   HorizontalTextAlignment="Start"
-                                   HorizontalOptions="Start"
-                                   VerticalOptions="Start"/>
+                                   Style="{StaticResource SectionMovieHeader}"/>
                            </CollectionView.Header>
 
                            <CollectionView.ItemTemplate>
@@ -53,10 +49,7 @@
                            <CollectionView.EmptyView>
                                <ContentView>
                                    <Label
-                                       Text="No movie was found"
-                                       FontAttributes="Bold"
-                                       HorizontalOptions="Fill"
-                                       HorizontalTextAlignment="Center"/>
+                                       Style="{StaticResource EmptyViewMessage}"/>
                                </ContentView>
                            </CollectionView.EmptyView>
                        </CollectionView>
@@ -70,11 +63,7 @@
                            <CollectionView.Header>
                                <Label
                                    Text="UPCOMING"
-                                   TextColor="White"
-                                   FontSize="Small"
-                                   HorizontalTextAlignment="Start"
-                                   HorizontalOptions="Start"
-                                   VerticalOptions="Start"/>
+                                   Style="{StaticResource SectionMovieHeader}"/>
                            </CollectionView.Header>
 
                            <CollectionView.ItemTemplate>
@@ -86,10 +75,7 @@
                            <CollectionView.EmptyView>
                                <ContentView>
                                    <Label
-                                       Text="No movie was found"
-                                       FontAttributes="Bold"
-                                       HorizontalOptions="Fill"
-                                       HorizontalTextAlignment="Center"/>
+                                       Style="{StaticResource EmptyViewMessage}"/>
                                </ContentView>
                            </CollectionView.EmptyView>
                        </CollectionView>
@@ -103,11 +89,7 @@
                            <CollectionView.Header>
                                <Label
                                    Text="POPULAR"
-                                   TextColor="White"
-                                   FontSize="Small"
-                                   HorizontalTextAlignment="Start"
-                                   HorizontalOptions="Start"
-                                   VerticalOptions="Start"/>
+                                   Style="{StaticResource SectionMovieHeader}"/>
                            </CollectionView.Header>
 
                            <CollectionView.ItemTemplate>
@@ -119,10 +101,7 @@
                            <CollectionView.EmptyView>
                                <ContentView>
                                    <Label
-                                       Text="No movie was found"
-                                       FontAttributes="Bold"
-                                       HorizontalOptions="Fill"
-                                       HorizontalTextAlignment="Center"/>
+                                       Style="{StaticResource EmptyViewMessage}"/>
                                </ContentView>
                            </CollectionView.EmptyView>
                        </CollectionView>

@@ -31,6 +31,27 @@
         <Setter Property="LineBreakMode" Value="WordWrap"/>
     </Style>
 
+    <Style
+        TargetType="Label"
+        x:Key="SectionMovieHeader">
+        <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+
+    <Style
+        TargetType="Label"
+        x:Key="EmptyViewMessage">
+        <Setter Property="Text" Value="No movie was found"/>
+        <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Fill"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+
     <!--Frames-->
     <Style
         TargetType="Frame"
